@@ -19,7 +19,7 @@ if __name__ == '__main__':
                 name_pokemon = pokemon_form['name']
                 list_name.append(name_pokemon)
 
-        
+        list_pokemon_at = []
         count = 0
         for letras in list_name:
             if "at" in letras and letras.count('a') == 2:
