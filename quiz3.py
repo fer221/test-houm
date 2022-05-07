@@ -30,6 +30,23 @@ if __name__ == '__main__':
             convert = int(id_i)
             if convert <= 151:
                 id_o.append(id_i)
+
+    list_weight_pokemon = []
+    for x in id_o:
+        position_id = x
+
+        with open(r"C:/Users/Fer/Desktop/test-houm/pokemon_weight/"+position_id+".json") as f:
+            f_read = f.read()
+            convert_dic = json.loads(f_read)
+            weight_pokemon = convert_dic['weight'] 
+            list_weight_pokemon.append(weight_pokemon)
+
+    list_menor = []
+    for acendente in list_weight_pokemon:
+        if acendente < 1234:
+            list_menor.append(acendente)
+            list_menor.sort(reverse=True)
+    print("el peso maximo y minimo de los pokemones tipo fighting de la primera generacion son: ", list_menor)
     
     
     
